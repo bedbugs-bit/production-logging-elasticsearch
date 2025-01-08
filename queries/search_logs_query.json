@@ -1,0 +1,15 @@
+{
+  "unoptimized-query": {
+    "wildcard": {
+      "message": {
+        "value": "*search*"
+      }
+    }
+  },
+
+  "query": {
+    "match": {
+      "message": "error"
+    }
+  }
+}
