@@ -1,0 +1,26 @@
+{
+  "mappings": {
+    "properties": {
+      "timestamp": {
+        "type": "date"
+      },
+      "log_level": {
+        "type": "keyword"
+      },
+      "message": {
+        "type": "text"
+      },
+
+      "service_name": {
+        "type": "keyword"
+      },
+
+      "user_id": {
+        "type": "keyword"
+      },
+      "request_path": {
+        "type": "keyword"
+      }
+    }
+  }
+}
