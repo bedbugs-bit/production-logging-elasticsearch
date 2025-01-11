@@ -1,3 +1,9 @@
 network.host: 0.0.0.0
 cluster.name: elastic-cluster
 node.name: node-1
+http.port: 9200
+
+# Log Directory and Data Directory
+
+path.data: /usr/share/elasticsearch/data
+path.logs: /usr/share/elasticsearch/logs
