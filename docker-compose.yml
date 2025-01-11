@@ -14,9 +14,7 @@ services:
         hard: -1
     ports:
       - "9200:9200"
-    volumes:
-      - es_data:/usr/share/elasticsearch/data
-
+  
   kibana:
     image: docker.elastic.co/kibana/kibana:8.17.0
     container_name: kibana
@@ -32,8 +30,6 @@ services:
     container_name: logstash
     environment:
       - LS_JAVA_OPTS=-Xmx1g -Xms1g      
-    volumes:
-      - ./config/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
     ports:
       - "5044:5044"
     depends_on:
@@ -43,13 +39,7 @@ services:
     image: docker.elastic.co/beats/filebeat:8.17.0
     container_name: filebeat
 
-    volumes:
-      - ./config/filebeat.yml:/usr/share/filebeat/filebeat.yml
-      - /var/log:/var/log:ro
     depends_on:
       - elasticsearch
       - logstash
 
-volumes:
-  es_data:
-    driver: local
