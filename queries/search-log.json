@@ -1,0 +1,12 @@
+{
+  "query": {
+    "bool": {
+      "must": [{ "match": { "level": "ERROR" } }],
+      "filter": [
+        { "range": { "timestamp": { "gte": "now-7d/d", "lt": "now/d" } } }
+      ]
+    }
+  },
+  "sort": [{ "timestamp": { "order": "desc" } }],
+  "size": 100
+}
