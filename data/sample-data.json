@@ -1,0 +1,15 @@
+[
+    {
+      "timestamp": "2025-01-11T10:15:30Z",
+      "level": "INFO",
+      "message": "User logged in successfully",
+      "user": "jade-wayne"
+    },
+    {
+      "timestamp": "2025-01-11T10:20:45Z",
+      "level": "ERROR",
+      "message": "Database connection failed",
+      "user": "admin"
+    }
+  ]
+  

@@ -2,7 +2,9 @@ filebeat.inputs:
   - type: log
     enabled: true
     paths:
-      - /var/log/nginx/access.log
+      - /var/log/nginx/*.log
+      - /var/log/mysql/*.log
+      - /var/log/*.log
 
-output.elasticsearch:
-  hosts: ["elasticsearch:9200"]
+output.logstash:
+  hosts: ["logstash:5044"]
